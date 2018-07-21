@@ -8,6 +8,8 @@ public class GUIManager : MonoBehaviour {
 
     public GameObject MenuPanel;
     public GameObject ShopPanel;
+    public GameObject FurnitureScroll;
+    public GameObject WallScroll;
 
     public Image GhostImage1;
     public Image GhostImage2;
@@ -52,6 +54,8 @@ public class GUIManager : MonoBehaviour {
                 {
                     MenuPanel.SetActive(false);
                     ShopPanel.SetActive(false);
+                    FurnitureScroll.SetActive(false);
+                    WallScroll.SetActive(false);
                 }
                 break;
 
@@ -219,6 +223,20 @@ public class GUIManager : MonoBehaviour {
     public void ShopButton()
     {
         ShopPanel.SetActive(true);
+    }
+
+    public void FurnitureButton()
+    {
+        FurnitureScroll.SetActive(true);
+        MenuPanel.SetActive(false);
+        ShopPanel.SetActive(false);
+    }
+
+    public void WallButton()
+    {
+        WallScroll.SetActive(true);
+        MenuPanel.SetActive(false);
+        ShopPanel.SetActive(false);
     }
 
     void Start () {

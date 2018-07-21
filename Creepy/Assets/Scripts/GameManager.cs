@@ -11,8 +11,11 @@ public class GameManager : MonoBehaviour {
 
     static GameManager m_cInstance;
 
-    public float DayTime = 0.0f;
-    public float NightTime = 0.0f;
+    public int FurnitureSelect = 0; //가구선택
+    public int WallSelect = 0; //벽선택
+
+    public float DayTime = 0.0f; //낮 시간길이조정
+    public float NightTime = 0.0f; //밤 시간길이조정
     public int DayNight = 0; //0이면 낮 1이면 밤
 
 
