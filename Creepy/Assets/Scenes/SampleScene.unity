@@ -1369,6 +1369,7 @@ GameObject:
   - component: {fileID: 415008433}
   - component: {fileID: 415008432}
   - component: {fileID: 415008431}
+  - component: {fileID: 415008434}
   m_Layer: 5
   m_Name: Button1 (6)
   m_TagString: Untagged
@@ -1432,7 +1433,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 415008432}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 415008434}
+        m_MethodName: FurnitureSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &415008432
@@ -1469,6 +1481,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 415008429}
   m_CullTransparentMesh: 0
+--- !u!114 &415008434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 415008429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b76bb8fb77e214f97822745369821c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furniture: 5
 --- !u!1 &434321960
 GameObject:
   m_ObjectHideFlags: 0
@@ -1981,6 +2005,46 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &607245092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 607245094}
+  - component: {fileID: 607245093}
+  m_Layer: 0
+  m_Name: ItemManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &607245093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 607245092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6817325f74ab6f54094599bc268f7fab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &607245094
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 607245092}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 656, y: 612, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &627211481
 GameObject:
   m_ObjectHideFlags: 0
@@ -2310,6 +2374,7 @@ GameObject:
   - component: {fileID: 822011501}
   - component: {fileID: 822011500}
   - component: {fileID: 822011499}
+  - component: {fileID: 822011502}
   m_Layer: 5
   m_Name: Button1 (3)
   m_TagString: Untagged
@@ -2373,7 +2438,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 822011500}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 822011502}
+        m_MethodName: FurnitureSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &822011500
@@ -2410,6 +2486,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 822011497}
   m_CullTransparentMesh: 0
+--- !u!114 &822011502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 822011497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b76bb8fb77e214f97822745369821c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furniture: 3
 --- !u!1 &822161522
 GameObject:
   m_ObjectHideFlags: 0
@@ -2658,10 +2746,12 @@ MonoBehaviour:
   - {fileID: 326884124}
   - {fileID: 67788729}
   Selection: 0
+  FB: {fileID: 0}
   MenuPanel: {fileID: 1069039365}
   ShopPanel: {fileID: 858385912}
   FurnitureScroll: {fileID: 441120481}
   WallScroll: {fileID: 1021953595}
+  FurnitureInvenPanel: {fileID: 0}
   GhostImage1: {fileID: 1149369704}
   GhostImage2: {fileID: 2048899125}
   GhostImage3: {fileID: 1188676843}
@@ -2758,6 +2848,7 @@ GameObject:
   - component: {fileID: 929003518}
   - component: {fileID: 929003517}
   - component: {fileID: 929003516}
+  - component: {fileID: 929003519}
   m_Layer: 5
   m_Name: Button1 (4)
   m_TagString: Untagged
@@ -2821,7 +2912,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 929003517}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 929003519}
+        m_MethodName: FurnitureSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &929003517
@@ -2858,6 +2960,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 929003514}
   m_CullTransparentMesh: 0
+--- !u!114 &929003519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 929003514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b76bb8fb77e214f97822745369821c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furniture: 4
 --- !u!1 &952676796
 GameObject:
   m_ObjectHideFlags: 0
@@ -3159,6 +3273,7 @@ GameObject:
   - component: {fileID: 1034109571}
   - component: {fileID: 1034109570}
   - component: {fileID: 1034109569}
+  - component: {fileID: 1034109572}
   m_Layer: 5
   m_Name: Button1
   m_TagString: Untagged
@@ -3222,7 +3337,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1034109570}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1034109572}
+        m_MethodName: FurnitureSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1034109570
@@ -3259,6 +3385,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1034109567}
   m_CullTransparentMesh: 0
+--- !u!114 &1034109572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1034109567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b76bb8fb77e214f97822745369821c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furniture: 0
 --- !u!1 &1050920781
 GameObject:
   m_ObjectHideFlags: 0
@@ -3835,6 +3973,75 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1233801540}
   m_CullTransparentMesh: 0
+--- !u!1 &1248954789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1248954790}
+  - component: {fileID: 1248954792}
+  - component: {fileID: 1248954791}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1248954790
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1248954789}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1690916792}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.000024796, y: -24}
+  m_SizeDelta: {x: -408.6, y: -218.65}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1248954791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1248954789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1248954792
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1248954789}
+  m_CullTransparentMesh: 0
 --- !u!1 &1284216629
 GameObject:
   m_ObjectHideFlags: 0
@@ -3846,6 +4053,7 @@ GameObject:
   - component: {fileID: 1284216633}
   - component: {fileID: 1284216632}
   - component: {fileID: 1284216631}
+  - component: {fileID: 1284216634}
   m_Layer: 5
   m_Name: Button1 (2)
   m_TagString: Untagged
@@ -3909,7 +4117,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1284216632}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1284216634}
+        m_MethodName: FurnitureSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1284216632
@@ -3946,6 +4165,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1284216629}
   m_CullTransparentMesh: 0
+--- !u!114 &1284216634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1284216629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b76bb8fb77e214f97822745369821c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furniture: 2
 --- !u!1 &1343947931
 GameObject:
   m_ObjectHideFlags: 0
@@ -4613,6 +4844,7 @@ RectTransform:
   - {fileID: 858385913}
   - {fileID: 441120482}
   - {fileID: 1021953596}
+  - {fileID: 1248954790}
   m_Father: {fileID: 891940508}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5147,6 +5379,7 @@ GameObject:
   - component: {fileID: 1905199895}
   - component: {fileID: 1905199894}
   - component: {fileID: 1905199893}
+  - component: {fileID: 1905199896}
   m_Layer: 5
   m_Name: Button1 (1)
   m_TagString: Untagged
@@ -5210,7 +5443,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1905199894}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1905199896}
+        m_MethodName: FurnitureSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1905199894
@@ -5247,6 +5491,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1905199891}
   m_CullTransparentMesh: 0
+--- !u!114 &1905199896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1905199891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b76bb8fb77e214f97822745369821c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furniture: 1
 --- !u!1 &1908691718
 GameObject:
   m_ObjectHideFlags: 0
@@ -5550,6 +5806,7 @@ GameObject:
   - component: {fileID: 1989768223}
   - component: {fileID: 1989768222}
   - component: {fileID: 1989768221}
+  - component: {fileID: 1989768224}
   m_Layer: 5
   m_Name: Button1 (5)
   m_TagString: Untagged
@@ -5613,7 +5870,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1989768222}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1989768224}
+        m_MethodName: FurnitureSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1989768222
@@ -5650,6 +5918,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1989768219}
   m_CullTransparentMesh: 0
+--- !u!114 &1989768224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1989768219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b76bb8fb77e214f97822745369821c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furniture: 5
 --- !u!1 &2003407189
 GameObject:
   m_ObjectHideFlags: 0
@@ -5861,6 +6141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_cGUIManager: {fileID: 891940507}
+  m_cItemManager: {fileID: 607245093}
   m_eSceneStatus: 0
   Sun: {fileID: 1204218900}
   Moon: {fileID: 2008611062}

@@ -6,10 +6,14 @@ public class GUIManager : MonoBehaviour {
     public List<GameObject> m_listScene;
     public int Selection = 0;
 
+    public Furniture_Button FB;
+
     public GameObject MenuPanel;
     public GameObject ShopPanel;
     public GameObject FurnitureScroll;
     public GameObject WallScroll;
+    public GameObject FurnitureInvenPanel;
+
 
     public Image GhostImage1;
     public Image GhostImage2;
@@ -18,6 +22,8 @@ public class GUIManager : MonoBehaviour {
     public int GhostRandom1;
     public int GhostRandom2;
     public int GhostRandom3;
+
+    
 
     public enum eSceneStatus {TITLE,PLAY,GHOST,OPTION,MAX };
     eSceneStatus m_eCurrentStatus;//현재상태
@@ -56,6 +62,10 @@ public class GUIManager : MonoBehaviour {
                     ShopPanel.SetActive(false);
                     FurnitureScroll.SetActive(false);
                     WallScroll.SetActive(false);
+                }
+                if (Input.GetKeyUp(KeyCode.I))
+                {
+                    FurnitureInvenPanel.SetActive(true);
                 }
                 break;
 

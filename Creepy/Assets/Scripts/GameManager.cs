@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
     public GUIManager m_cGUIManager;
+    public ItemManager m_cItemManager;
     public GUIManager.eSceneStatus m_eSceneStatus;
 
     public GameObject Sun; //태양 이미지

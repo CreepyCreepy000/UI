@@ -64,6 +64,9 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GUIScripts\Furniture_Button.cs" />
     <Compile Include="Assets\Scripts\GUIScripts\GUIManager.cs" />
+    <Compile Include="Assets\Scripts\GUIScripts\GUIPanel.cs" />
+    <Compile Include="Assets\Scripts\ItemManager.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/licjc/Documents/GitHub/a/UI/Creepy/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

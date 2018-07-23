@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Furniture_Button : MonoBehaviour {
 
-    public int Furniture = 0;
+    public ItemManager.eFurniture furniture;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +15,11 @@ public class Furniture_Button : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void FurnitureSelect()
+    {
+        GameManager.GetInstance().FurnitureSelect = GameManager.GetInstance().m_cItemManager.GetFurniture(furniture).Selection;
+    }
 
 
 }
