@@ -10,12 +10,20 @@ public class GUIPanel : MonoBehaviour {
     public void SetFurniture(ItemManager.eFurniture furniture)
     {
         Furniture cFurniture = GameManager.GetInstance().m_cItemManager.GetFurniture(furniture);
+        m_cImage.sprite = Resources.Load<Sprite>("Furniture/" + cFurniture.Img);
+        GameManager.GetInstance().m_cItemManager.FSelection = (int)furniture;
     }
 
+    private void OnGUI()
+    {
+        if (GUI.Button(new Rect(0, 40, 100, 20), "GUIPanel"))
+        {
+            SetFurniture(ItemManager.eFurniture.Bed);
+        }
+    }
 
-
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	

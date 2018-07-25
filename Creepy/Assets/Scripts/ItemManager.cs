@@ -30,6 +30,7 @@ public class Furniture
 public class ItemManager : MonoBehaviour {
     public enum eFurniture { NONE=-1, Bed, Bookshelf, Clock, Piano, Shelf,Sofa, Tree}
     public List<Furniture> m_listFurniture = new List<Furniture>();
+    public int FSelection;
 	// Use this for initialization
 	void Start () {
         FurnitureInitialize();

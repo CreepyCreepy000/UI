@@ -63,6 +63,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GUIScripts\Furniture_Button.cs" />
+    <Compile Include="Assets\Scripts\GUIScripts\GUIFurnitureButton.cs" />
+    <Compile Include="Assets\Scripts\GUIScripts\GUIList.cs" />
     <Compile Include="Assets\Scripts\GUIScripts\GUIManager.cs" />
     <Compile Include="Assets\Scripts\GUIScripts\GUIPanel.cs" />
     <Compile Include="Assets\Scripts\ItemManager.cs" />
